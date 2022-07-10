@@ -1,10 +1,17 @@
 import PageLayout from "../layouts/PageLayout";
+import {motion} from "framer-motion"
 
 const Contact = () => {
    return (
-      <PageLayout>
-        <h1>This is home contact</h1>
-      </PageLayout>
+      <motion.div
+      initial={{width: 0}}
+      animate={{width: "100vw" , height:'100vh' }}
+      exit={{ x: window.innerWidth , transition: {duration: .5 }}}
+      >
+         <PageLayout>
+            <h1>This is home contact</h1>
+         </PageLayout>
+      </motion.div>
    )
 }
 
